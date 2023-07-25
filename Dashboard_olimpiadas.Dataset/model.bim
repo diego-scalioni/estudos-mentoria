@@ -1,0 +1,662 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.119.870.0 (23.07)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Olimpiadas\",\"Medidas\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "DateTableTemplate_5699bafe-0a95-4245-bb5b-87080577ee9c",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "58df49b0-ec90-4588-a8eb-985b1e0d5e6e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "dc9c4203-cc9f-48d9-8782-33a859c7040f",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "009ea0a3-f856-465f-870f-ff52f0d05362",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "2cc1712b-579f-49bf-b395-10555d5ecd61",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "fc482250-ddcf-4ef8-99bd-2ac9c08f5bd7",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "0497af23-0417-488a-8f5c-cb1346f3c9c3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Trimestre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Trim \" & [QuarterNo]",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "lineageTag": "83c36c43-cb4f-4a98-9cef-c3acd05e6f0f",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Ano",
+                "column": "Ano",
+                "lineageTag": "693fc9e4-f73a-4409-962f-e8e91c87d045",
+                "ordinal": 0
+              },
+              {
+                "name": "Trimestre",
+                "column": "Trimestre",
+                "lineageTag": "28af1051-5f98-4a8e-8027-6b78d875236a",
+                "ordinal": 1
+              },
+              {
+                "name": "Mês",
+                "column": "Mês",
+                "lineageTag": "4b99eabb-7be2-4c15-b303-20b46ae03ac6",
+                "ordinal": 2
+              },
+              {
+                "name": "Dia",
+                "column": "Dia",
+                "lineageTag": "ec0caf5d-5802-41a8-93ed-6e1670a5e5fa",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "0a161b46-2328-4f8a-83bc-cbc154b2f674"
+          }
+        ],
+        "isPrivate": true,
+        "lineageTag": "9f60dcd8-a1b4-4988-82a4-6af0342d682b",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_5699bafe-0a95-4245-bb5b-87080577ee9c-e98964ef-2bb4-42e8-9b88-3648b9f6140b",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Medidas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "lineageTag": "c394bd8d-ec26-4187-84c5-17d8a656cf76",
+        "measures": [
+          {
+            "name": "Qtd de atletas",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "DISTINCTCOUNT(Olimpiadas[Name])",
+            "formatString": "#,0",
+            "lineageTag": "4aa570c8-111a-4666-836a-d53a98c326e8"
+          },
+          {
+            "name": "br_atletas",
+            "expression": [
+              "calculate(",
+              "        distinctcount(olimpiadas[name]),",
+              "        Olimpiadas[NOC]=\"BRA\")"
+            ],
+            "formatString": "0",
+            "lineageTag": "a756c378-8716-455b-8933-23ea856c86e6"
+          },
+          {
+            "name": "media_idade",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE(Olimpiadas[Age])",
+            "lineageTag": "1a3dab8e-e7a0-4dc5-b8cd-22ca5ed54488"
+          },
+          {
+            "name": "medalhas",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "CALCULATE(COUNT(Olimpiadas[Medal]),Olimpiadas[Medal]<>\"NA\")",
+            "formatString": "#,0",
+            "lineageTag": "2ea32aca-75b0-4e3b-8962-6e9108df795a"
+          },
+          {
+            "name": "participacoes",
+            "expression": "COUNTROWS(Olimpiadas)",
+            "formatString": "0",
+            "lineageTag": "44f5a8d4-51d3-4b45-85eb-a9ed9eb5d748"
+          },
+          {
+            "name": "ouro",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "CALCULATE([participacoes],Olimpiadas[Medal]=\"Gold\")",
+            "formatString": "#,0",
+            "lineageTag": "e71523e6-be89-4d84-a789-d82f4167aaf2"
+          },
+          {
+            "name": "prata",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "CALCULATE([participacoes],Olimpiadas[Medal]=\"Silver\")",
+            "formatString": "#,0",
+            "lineageTag": "52a5c9da-13e8-46da-8179-74ddec423567"
+          },
+          {
+            "name": "bronze",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "CALCULATE([participacoes],Olimpiadas[Medal]=\"Bronze\")",
+            "formatString": "#,0",
+            "lineageTag": "92d9d20e-4eba-4727-bb1d-6ce44be1d766"
+          },
+          {
+            "name": "eficiencia",
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              }
+            ],
+            "expression": "Medidas[medalhas] / [participacoes]",
+            "formatString": "0%;-0%;0%",
+            "lineageTag": "9f7d1f65-608e-4a06-8da4-f8b6ee383aa6"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas-f1826d92-2a8c-4e41-91ff-3f2703cabe38",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Coluna 1\" = _t]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(Fonte,{{\"Coluna 1\", type text}}),",
+                "    #\"Colunas Removidas\" = Table.RemoveColumns(#\"Tipo Alterado\",{\"Coluna 1\"})",
+                "in",
+                "    #\"Colunas Removidas\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Olimpiadas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Age",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5ec3723c-6e22-4111-a36b-ec21ecea8439",
+            "sourceColumn": "Age",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d12ad02c-7849-4c4d-ad25-43145541e4f4",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Event",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b18fcfef-460c-467a-8de1-3b6162c39957",
+            "sourceColumn": "Event",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Games",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9f5407db-f577-420e-93a7-bb7a9306f5f4",
+            "sourceColumn": "Games",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Height",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7c5c87fa-af0b-4bb4-b742-bc471777dc4e",
+            "sourceColumn": "Height",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7ab202b1-fc1e-447a-9e60-aa24801555f9",
+            "sourceColumn": "ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Medal",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "38f71cb7-1d3f-40ff-8d55-0b142497339d",
+            "sourceColumn": "Medal",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOC",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5aaa0440-8dd5-4a08-b529-1c1466f392c7",
+            "sourceColumn": "NOC",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9103278b-89eb-4776-88ea-2601e266c641",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Season",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bcef8be5-846c-4c24-9694-9b9ddf45d67b",
+            "sourceColumn": "Season",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sex",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "85eebe7e-f769-40ee-bfe4-e1e46d4dc031",
+            "sourceColumn": "Sex",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8389d02f-4107-4e4b-8abb-fd12fb76140f",
+            "sourceColumn": "Sport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Team",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "82de38f9-ca25-4843-aa97-8dfd3f56d092",
+            "sourceColumn": "Team",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Weight",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3a87d9b0-713f-4d6d-b5e7-5a85916438f9",
+            "sourceColumn": "Weight",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "245ac9c7-f6ec-4e29-9045-2825ca60dc6d",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "397cc0b4-465e-4fa0-a350-77472debcca5",
+        "partitions": [
+          {
+            "name": "Olimpiadas-daa78b38-69a3-4b36-9b8d-85c4514d943a",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\jefferson\\Desktop\\Karine_lago\\DATAB-SemanaDoPowerBI-Aula1-Olimpiadas\\Dados\\athlete_events.csv\"),[Delimiter=\",\", Columns=15, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"Weight\", type number}, {\"Age\", Int64.Type}, {\"Year\", Int64.Type}}),",
+                "    #\"Erros Substituídos\" = Table.ReplaceErrorValues(#\"Tipo Alterado\", {{\"Weight\", null}}),",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Erros Substituídos\",{{\"Height\", Int64.Type}}),",
+                "    #\"Erros Substituídos1\" = Table.ReplaceErrorValues(#\"Tipo Alterado1\", {{\"Age\", null}}),",
+                "    #\"Erros Substituídos2\" = Table.ReplaceErrorValues(#\"Erros Substituídos1\", {{\"Height\", null}})",
+                "in",
+                "    #\"Erros Substituídos2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
